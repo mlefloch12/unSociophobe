@@ -2,10 +2,6 @@ export const Question = () => {
     return (
         <section>
             <div>
-                <p className="text-4xl mt-20 font-medium">Pourquoi suis-je atteint de phobie sociale ?</p>
-                <p className="text-2xl mt-2 text-justify indent-8"></p>
-            </div>
-            <div>
                 <h3 className="font-extrabold text-4xl mt-12">Tes questions</h3>
             </div>
             <div>
