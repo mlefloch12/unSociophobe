@@ -5,7 +5,7 @@ export const Question = () => {
                 <h3 className="font-extrabold text-4xl mt-12">Tes questions</h3>
             </div>
             <div>
-                <p className="text-2xl mt-5 text-justify indent-8">Tu trouveras ci-dessous des questions que je me suis posé et auxquelles j'y ai répondu avec mon expérience. Ces réponses sont purement subjectives et non l'avis d'expert ou autre spécialiste.</p>
+                <p className="text-2xl mt-5 text-justify indent-8">Tu trouveras ci-dessous des questions que je me suis posées et auxquelles j'y ai répondu avec mon expérience. Ces réponses sont purement subjectives et non l'avis d'expert ou autre spécialiste.</p>
             </div>
             <div>
                 <p className="text-4xl mt-20 font-medium">Pourquoi suis-je atteint de phobie sociale ?</p>
@@ -27,7 +27,7 @@ export const Question = () => {
             </div>
             <div>
                 <p className="text-4xl mt-20 font-medium">Comment je me sens maintenant ?</p>
-                <p className="text-2xl mt-2 text-justify indent-8">Aujourd'hui, je suis sur la bonne voix et je suis fier de ce que j'ai accompli pour y parvenir. M'ayant pris en main et ayant eu les encouragements de ma famille et de mes amis proches, je vous affirme avoir réussi à passer outre tout ça ! Même s'il y a toujours une part d'incertitude au fond de moi, je me bat contre celle-ci et je me prouver que je suis plus fort que ça.</p>
+                <p className="text-2xl mt-2 text-justify indent-8">Aujourd'hui, je suis sur la bonne voie et je suis fier de ce que j'ai accompli pour y parvenir. M'ayant pris en main et ayant eu les encouragements de ma famille et de mes amis proches, je vous affirme avoir réussi à passer outre tout ça ! Même s'il y a toujours une part d'incertitude au fond de moi, je me bats contre celle-ci et je me prouver que je suis plus fort que ça.</p>
                 <p className="text-2xl mt-2 text-justify indent-8">Je t'assure donc que tu peux y arriver, si j'ai réussi à traverser cette épreuve alors tu peux le faire aussi. Bien sûr, si tu as d'autres questions ou que tu as besoin de parler avec quelqu'un, n'hésite pas à venir sur mon Instagram que tu trouveras ci-dessous.</p>
             </div>
         </section>
