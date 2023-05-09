@@ -1,9 +1,23 @@
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../context/userContext';
+import { signOut } from "firebase/auth"
+import { useNavigate } from 'react-router-dom';
+import { auth } from '../firebase-config';
 
 export const Navbar = () => {
     const {toggleModals} = useContext(UserContext)
+
+    const navigate = useNavigate()
+
+    const logOut = async () => {
+        try {
+            await signOut(auth)
+            navigate("/")
+        } catch {
+            alert("Pour des raisons inconnues, nous n'arrivons pas à vous déconnecter. Veuillez vérifier votre connexion.")
+        }
+    }
 
     return (
         <section>
@@ -16,7 +30,7 @@ export const Navbar = () => {
                 <NavLink className='text-2xl mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/beproud'>Sois fier de toi</NavLink>
                 <button onClick={() => toggleModals("signUp")} className='mr-3 rounded bg-blue-300 text-zinc p-1'>Connexion</button>
                 <button onClick={() => toggleModals("signIp")} className='mr-3 rounded bg-blue-300 text-zinc p-1'>Inscription</button>
-                <button className='mr-3 rounded bg-red-600 text-zinc p-1'>Déconnexion</button>
+                <button onClick={logOut} className='mr-3 rounded bg-red-600 text-zinc p-1'>Déconnexion</button>
                 </nav>
             </header>
         </section>
