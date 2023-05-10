@@ -2,8 +2,6 @@ import './App.css';
 import { Navbar } from './components/Navbar';
 import { SignUpModal } from './components/SignUpModal';
 import { SignInModal } from './components/SignInModal';
-import Private from './screens/Private/Private';
-import PrivateHome from './screens/Private/PrivateHome/PrivateHome';
 import { Home } from './screens/Home';
 import { PageFAQ } from './screens/PageFAQ';
 import { WeeklyChallenge } from './screens/WeeklyChallenge';
@@ -21,9 +19,6 @@ function App() {
         <Route path='/pagefaq' element={ <PageFAQ/>}/>
         <Route path='/weeklychallenge' element={ <WeeklyChallenge/>}/>
         <Route path='/beproud' element={ <BeProud/>}/>
-        <Route path='/private' element={<Private />}>
-          <Route path='/private/private-home' element={<PrivateHome />} />
-        </Route>
       </Routes>
       <footer>
 

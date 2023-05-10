@@ -22,7 +22,7 @@ export const Navbar = () => {
     return (
         <section>
             <header className='flex justify-between items-center mb-5'>
-                <img className='w-24' src="images/logoSitePS.jpg" alt="Logo du site" />
+                <img className='w-20' src="images/logoSitePS.jpg" alt="Logo du site" />
                 <nav className='flex justify-center'>
                 <NavLink className='text-2xl mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/'>Accueil</NavLink><br />
                 <NavLink className='text-2xl mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/pagefaq'>Tes questions</NavLink><br />

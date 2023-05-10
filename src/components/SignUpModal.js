@@ -22,11 +22,12 @@ export const SignUpModal = () => {
         e.preventDefault()
 
         if((inputs.current[1].value.length || inputs.current[2].value.length) < 6) {
-            setValidation("6 caractères minimum");
+            setValidation("6 caractères minimum")
             return;
         }
         else if(inputs.current[1].value !== inputs.current[2].value) {
-            setValidation("Les mots ne correspondent pas")
+            setValidation("Les mots de passe ne correspondent pas")
+            return;
         }
 
         try {
@@ -36,16 +37,19 @@ export const SignUpModal = () => {
             )
             formRef.current.reset();
             setValidation("")
+            //console.log(cred);
             toggleModals("close")
-            navigate("/private/private-home");
+            navigate("/");
             
         } catch (err) {
             if(err.code === "auth/invalid-email") {
                 setValidation("Format de l'adresse mail invalide")
+                return;
             }
 
             else if(err.code === "auth/email-already-in-use") {
                 setValidation("Cette adresse mail est déjà utilisée")
+                return;
             }
         }
     }

@@ -28,11 +28,12 @@ export const SignInModal = () => {
             )
             formRef.current.reset();
             setValidation("")
+            //console.log(cred);
             toggleModals("close")
-            navigate("/private/private-home");
+            navigate("/");
             
         } catch {
-            setValidation("Adresse mail ou mot de passe incorrect.")
+            setValidation("Adresse mail et/ou mot de passe incorrect.")
         }
     }
 
@@ -59,8 +60,9 @@ export const SignInModal = () => {
                                     <input ref={addInputs} name='email' required type="email" id='signInEmail' className="border-2"/>
                                 </div>
                                 <div className="flex flex-col py-2">
-                                    <label htmlFor="signInPwd">Entrez le mot de passe</label>
+                                    <label htmlFor="signInPwd">Mot de passe</label>
                                     <input ref={addInputs} name='pwd' required type="password" id='signInPwd' className="border-2"/>
+                                    <p>{validation}</p>
                                 </div>
                                 <button className="bg-white border-black border-2 rounded hover:bg-black hover:text-white">Valider</button>
                             </form>
