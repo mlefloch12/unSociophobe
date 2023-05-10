@@ -58,34 +58,34 @@ export const SignUpModal = () => {
     return (
         <section>
             {modalState.signUpModal && (
-            <div className=" fixed  top-0 w-screen h-screen">
-                <div onClick={closeModal} className="w-full h-full bg-black/75 ">
-                    <div className="absolute top-1/2 left-1/2 translate-x-2/4 translate-y-2/4 min-w-400">
-                        <div className="flex flex-row justify-between items-center">
+            <div className='h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50'>
+                <div className="bg-white rounded shadow-lg w-1/5">
+                    <div onClick={closeModal} className="w-full h-full bg-black/75"></div>
+                        <div className="border-b px-4 py-2">
+                        <div className="flex flex-row justify-between">
                             <h5 className="text-2xl">Inscription</h5>
                             <button onClick={closeModal}><CgClose className='m-2 items-center'/></button>
                         </div>
-                        <div>
-                            <form ref={formRef} onSubmit={handleForm}>
-                                <div className='mb-3'>
+                        <div className="p-3">
+                            <form className="bg-white flex flex-col max-w-xs p-4" ref={formRef} onSubmit={handleForm}>
+                                <div className="flex flex-col py-2">
                                     <label htmlFor="signUpEmail">Adresse mail</label>
-                                    <input ref={addInputs} name='email' required type="email" id='signUpEmail'/>
+                                    <input ref={addInputs} name='email' required type="email" id='signUpEmail' className="border-2"/>
                                 </div>
-                                <div className='mb-3'>
+                                <div className="flex flex-col py-2">
                                     <label htmlFor="signUpPwd">Entrez le mot de passe</label>
-                                    <input ref={addInputs} name='pwd' required type="password" id='signUpPwd'/>
+                                    <input ref={addInputs} name='pwd' required type="password" id='signUpPwd' className="border-2"/>
                                 </div>
-                                <div className='mb-3'>
+                                <div className="flex flex-col py-2">
                                     <label htmlFor="repeatPWD">Répétez le mot de passe</label>
-                                    <input ref={addInputs} name='pwd' required type="password" id='repeatPWD'/>
+                                    <input ref={addInputs} name='pwd' required type="password" id='repeatPWD' className="border-2"/>
                                     <p>{validation}</p>
                                 </div>
-                                <button>Valider</button>
+                                <button className="bg-white border-black border-2 rounded hover:bg-black hover:text-white">Valider</button>
                             </form>
                         </div>
                     </div>
                 </div>
-                
             </div>
             )}
         </section>

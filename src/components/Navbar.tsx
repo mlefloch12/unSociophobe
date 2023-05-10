@@ -28,8 +28,8 @@ export const Navbar = () => {
                 <NavLink className='text-2xl mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/pagefaq'>Tes questions</NavLink><br />
                 <NavLink className='text-2xl mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/weeklychallenge'>Tes défis hebdomadaires</NavLink>
                 <NavLink className='text-2xl mr-3' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/beproud'>Sois fier de toi</NavLink>
-                <button onClick={() => toggleModals("signUp")} className='mr-3 rounded bg-blue-300 text-zinc p-1'>Connexion</button>
-                <button onClick={() => toggleModals("signIp")} className='mr-3 rounded bg-blue-300 text-zinc p-1'>Inscription</button>
+                <button onClick={() => toggleModals("signUp")} className='mr-3 rounded bg-blue-300 text-zinc p-1'>Inscription</button>
+                <button onClick={() => toggleModals("signIn")} className='mr-3 rounded bg-blue-300 text-zinc p-1'>Connexion</button>
                 <button onClick={logOut} className='mr-3 rounded bg-red-600 text-zinc p-1'>Déconnexion</button>
                 </nav>
             </header>

@@ -44,29 +44,29 @@ export const SignInModal = () => {
     return (
         <section>
             {modalState.signInModal && (
-            <div className=" fixed  top-0 w-screen h-screen">
-                <div onClick={closeModal} className="w-full h-full bg-black/75 ">
-                    <div className="absolute top-1/2 left-1/2 translate-x-2/4 translate-y-2/4 min-w-400">
-                        <div className="flex flex-row justify-between items-center">
+            <div className='h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50'>
+                <div className="bg-white rounded shadow-lg w-1/5">
+                <div onClick={closeModal} className="w-full h-full bg-black/75"></div>
+                    <div className="border-b px-4 py-2">
+                        <div className="flex flex-row justify-between">
                             <h5 className="text-2xl">Connexion</h5>
                             <button onClick={closeModal}><CgClose className='m-2 items-center'/></button>
                         </div>
-                        <div>
-                            <form ref={formRef} onSubmit={handleForm}>
-                                <div className='mb-3'>
+                        <div className="p-3">
+                            <form ref={formRef} onSubmit={handleForm} className="bg-white flex flex-col max-w-xs p-4">
+                                <div className="flex flex-col py-2">
                                     <label htmlFor="signInEmail">Adresse mail</label>
-                                    <input ref={addInputs} name='email' required type="email" id='signInEmail'/>
+                                    <input ref={addInputs} name='email' required type="email" id='signInEmail' className="border-2"/>
                                 </div>
-                                <div className='mb-3'>
+                                <div className="flex flex-col py-2">
                                     <label htmlFor="signInPwd">Entrez le mot de passe</label>
-                                    <input ref={addInputs} name='pwd' required type="password" id='signInPwd'/>
+                                    <input ref={addInputs} name='pwd' required type="password" id='signInPwd' className="border-2"/>
                                 </div>
-                                <button>Valider</button>
+                                <button className="bg-white border-black border-2 rounded hover:bg-black hover:text-white">Valider</button>
                             </form>
                         </div>
                     </div>
                 </div>
-                
             </div>
             )}
         </section>
